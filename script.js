@@ -10,7 +10,7 @@ function checkPalindrome(input){
     }
     result.replaceChildren();
     let regex = /[^A-Z0-9a-z]/g;
-    let newString = input.replace(regex,'');
+    let newString = input.replace(regex,'').toLowerCase();
     let pali = true;
     for(let i=0,j=newString.length-1;i<newString.length;i++,j--){
         if(newString[i] !== newString[j]){
