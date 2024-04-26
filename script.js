@@ -11,7 +11,13 @@ function checkPalindrome(input){
     result.replaceChildren();
     let regex = /[^A-Z0-9a-z]/g;
     let newString = input.replace(regex,'');
-    let word = newString === [newString].reverse().join() ? 'is' : 'is not';
+    let pali = true;
+    for(let i=0,j=newString.length-1;i<newString.length;i++,j--){
+        if(newString[i] !== newString[j]){
+            pali = false;
+        }
+    }
+    let word = pali ? 'is' : 'is not';
     const HTMLString = `<strong>${orgInput}</strong> ${word} a palindrome.`;
     const pTag = document.createElement('p');
     pTag.className = 'output';
