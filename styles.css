@@ -27,11 +27,13 @@ main{
     min-width: 130px;
     min-height: 15px;
     margin-bottom: 20px;
+    text-shadow: rgb(20, 16, 1) 1px 0 20px;
 }
 #palin-title{
     min-height: 15px;
     min-width: 145px;
     margin-bottom: 40px;
+    font-style:oblique;
 }
 #main-frame{
     border: 1px solid;
@@ -42,12 +44,17 @@ main{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgba(228, 57, 57, 0.628);
+    background:linear-gradient(90deg,rgb(249, 130, 130),rgb(246, 137, 121),rgb(231, 215, 132),rgb(249, 130, 130));
     border-radius: 17px;
+    box-shadow: 10px 10px rgb(146, 22, 22);
+
 }
 #main-frame label{
     margin-top: -30px;
     margin-bottom: 15px;
+}
+#main-frame strong:hover{
+    color: ghostwhite;
 }
 #main-frame input{
     background-color: rgba(228, 57, 57, 0);
@@ -72,7 +79,9 @@ main{
     color: ghostwhite;
     border-radius: 20px;
     font-family:cursive;
+    box-shadow: -2px 4px rgb(118, 112, 137);
 }
+
 #help{
     width: min(100vw,450px);
     position: relative;
@@ -80,12 +89,12 @@ main{
     border: 1px solid;
     height: 150px;
     min-height: 140px;
-    background-color: rgb(87, 186, 247);
+    background: linear-gradient(90deg,rgb(136, 143, 203),rgb(122, 183, 252),rgb(118, 233, 210),rgb(136,143,203));
     border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    
+    box-shadow: 10px 10px rgb(29, 29, 136);
 }
 #help svg{
     float: left;
@@ -102,10 +111,37 @@ main{
 }
 .output{
     position: relative;
-    top: 15px;
+    top: 18px;
     font-size: 16px;
     text-align: center;
 }
 .output strong{
-    color: ghostwhite;
+    color: rgb(0, 0, 0);
+}
+#svg-image:hover{
+    animation-name: rot;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+#help svg:hover{
+    animation-name: roto;
+    animation-duration: 6s;
+}
+@keyframes rot{
+    0% {transform: rotateZ(15deg);}
+    100% {transform: rotateZ(30deg);}
+}
+@keyframes roto{
+    0%{transform: rotateZ(30deg);}
+    8%{transform: rotateZ(60deg);}
+    16%{transform: rotateZ(90deg);}
+    24%{transform: rotateZ(120deg);}
+    32%{transform: rotateZ(150deg);}
+    40%{transform: rotateZ(180deg);}
+    48%{transform: rotateZ(210deg);}
+    56%{transform: rotateZ(240deg);}
+    64%{transform: rotateZ(270deg);}
+    72%{transform: rotateZ(300deg);}
+    80%{transform: rotateZ(330deg);}
+    100%{transform: rotateZ(360deg);}
 }
