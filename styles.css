@@ -81,7 +81,9 @@ main{
     font-family:cursive;
     box-shadow: -2px 4px rgb(118, 112, 137);
 }
-
+#main-frame button:hover{
+    scale: 1.03;
+}
 #help{
     width: min(100vw,450px);
     position: relative;
